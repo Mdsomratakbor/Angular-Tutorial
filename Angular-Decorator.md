@@ -1,6 +1,6 @@
 ### What are types of decorators in Angular?
 - 1. Class Decorators. **Example: @Component, @NgModule**
-- 2. Property Decorators. **Example: *@Input and @Output (These two decorators are used inside a class)*
+- 2. Property Decorators. **Example: *@Input and @Output (These two decorators are used inside a class)**
 - 3. Method Decorators.
 - 4. Parameter Decorators.
 
