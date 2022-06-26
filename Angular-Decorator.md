@@ -2,7 +2,7 @@
 - 1. Class Decorators. **Example: @Component, @NgModule**
 - 2. Property Decorators. **Example: @Input and @Output (These two decorators are used inside a class)**
 - 3. Method Decorators. **Example: @HostListener**
-- 4. Parameter Decorators.
+- 4. Parameter Decorators. **Example: **
 
 **1. Class Decorator :** `Angular class decorator are top level decorator,  we use to express intent for classes.They allow us to tell Angular that a particular class is a component, or module, for example. And the decorator allows us to define this intent without having to actually put any code inside the class.`
 
@@ -99,6 +99,25 @@ export class ExampleComponent {
   @HostListener('click', ['$event'])
   onHostClick(event: Event) {
     // clicked, `event` available
+  }
+}
+</pre>
+
+**Parameter Decorators**
+`Parameter decorators are quite interesting. You may have come across these when injecting primitives into a constructor, where you need to manually tell Angular to inject a particular provider.`
+`Parameter decorators allow us to decorate parameters in our class constructors. An example of this is @Inject that lets us tell Angular what we want that parameter to be initiated with:`
+
+<pre>
+import { Component, Inject } from '@angular/core';
+import { MyService } from './my-service';
+
+@Component({
+  selector: 'example-component',
+  template: 'Woo a component!'
+})
+export class ExampleComponent {
+  constructor(@Inject(MyService) myService) {
+    console.log(myService); // MyService
   }
 }
 </pre>
