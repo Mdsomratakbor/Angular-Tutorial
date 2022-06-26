@@ -32,7 +32,12 @@ export class ExampleModule {
 `Notice how both classes by themselves are effectively the same. No code is needed within the class to tell Angular that it is a component or a module. All we need to do is decorate it, and Angular will do the rest.`
 
 
+
 **2. Property Decorator:** `These are probably the second most common decorators that you’ll come across. They allow us to decorate specific properties within our classes - an extremely powerful mechanism.`
+
+![input](https://user-images.githubusercontent.com/53125546/175805924-3e844533-51e0-4846-8d1d-1ba28dd68094.svg)
+
+![output](https://user-images.githubusercontent.com/53125546/175805925-a61c0a7f-8a7b-4734-b83f-26bba5d35993.svg)
 
 **Let’s take a look at @Input()**
 
