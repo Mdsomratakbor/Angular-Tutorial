@@ -189,3 +189,10 @@ class ExampleClass {
   }
 }
 </pre>
+
+### What Angular decorators actually do
+`Every type of decorator shares the same core functionality. From a purely decorative point of view, @Component and @Directive both work in the same way, as do @Input and @Output. Angular does this by using a factory for each type of decorator.`
+
+`Let’s look at the most common decorator in Angular, the @Component.`
+
+`We’re not going to dive into the actual code that Angular uses to create these decorators because we only need to understand them on a higher level.`
