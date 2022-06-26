@@ -84,3 +84,6 @@ angular.module('app').component('exampleComponent', exampleComponent);
 `You can see above that we have two separate properties to maintain should we expand, refactor or change our component’s API - bindings and the property name inside the class. However, in Angular there is a single property exampleProperty which is decorated, which is easier to change, maintain and track as our codebase grows.`
 
 `Angular Directives In-Depth eBook Cover Free eBook`
+
+**Method Decorators**
+`Method decorators are very similar to property decorators but are used for methods instead. This let’s us decorate specific methods within our class with functionality. A good example of this is @HostListener. This allows us to tell Angular that when an event on our host happens, we want the decorated method to be called with the event.`
