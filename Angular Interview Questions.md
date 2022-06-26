@@ -14,3 +14,11 @@ maintainability.`
 
 ### 4. What are Single Page Applications (SPA)?
 `Single-page applications are web applications that load once with new features just being mere additions to the user interface. It does not load new HTML pages to display the new page's content, instead generated dynamically. This is made possible through JavaScript's ability to manipulate the DOM elements on the existing page itself. A SPA approach is faster, thus providing a seamless user experience`
+
+### 5. What are decorators in Angular? 
+Decorators are a design pattern or functions that define how Angular features work. They are used to make prior modifications to a class, service, or filter. Angular supports four types of decorators, they are:
+
+- Class Decorators
+- Property Decorators
+- Method Decorators
+- Parameter Decorators
