@@ -150,7 +150,13 @@ class ExampleClass {
 `When we use the decorators in Angular we pass in some form of configuration, specific to the decorator.`
 
 `For example, when we use @Component we pass through an object, and with @HostListener we pass through a string as the first argument (the event name, such as 'click') and optionally an array of strings for further variables (such as $event) to be passed through to the decorated method.`
+
 `Let’s change our code above to execute the Console function with a value to match how we use the Angular decorators.`
+<pre>
+function Console(target) {
+  console.log('Our decorated class', target);
+}
+</pre>
 <pre>
 @Console('Hey!')
 class ExampleClass {
