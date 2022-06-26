@@ -23,7 +23,7 @@ Decorators are a design pattern or functions that define how Angular features wo
 - Method Decorators
 - Parameter Decorators
 
-### 6. 7. Mention some advantages of Angular.
+### 6. Mention some advantages of Angular.
 `Some of the common advantages of Angular are - `
 
 **MVC architecture -**`Angular is a full-fledged MVC framework. It provides a firm opinion on how the application should be structured. It also offers bi-directional data flow and updates the real DOM.`
