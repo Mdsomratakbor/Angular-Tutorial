@@ -121,3 +121,65 @@ export class ExampleComponent {
   }
 }
 </pre>
+
+
+### How to create a custome Decorator?
+
+**Decorator functions**
+`Decorators are actually just functions, it’s as simple as that, and are called with whatever they are decorating. A method decorator will be called with the value of the method it’s decorating, and a class decorator will be called with the class to be decorated.`
+
+`Let’s quickly make a decorator that we can use on a class to demonstrate this a little further. This decorator is just going to simply log the class to the console:`
+<pre>
+function Console(target) {
+  console.log('Our decorated class', target);
+}
+</pre>
+
+`Here, we have created Console (using the uppercase naming convention Angular uses) and are specifying a single argument called target. The target will in fact be the class that we decorate, which means we can now decorate any class with our decorator and see it outputted in the console:`
+<pre>
+@Console
+class ExampleClass {
+  constructor() {
+    console.log('Yo!');
+  }
+}
+</pre>
+
+### Passing data to a decorator
+
+`When we use the decorators in Angular we pass in some form of configuration, specific to the decorator.`
+
+`For example, when we use @Component we pass through an object, and with @HostListener we pass through a string as the first argument (the event name, such as 'click') and optionally an array of strings for further variables (such as $event) to be passed through to the decorated method.`
+`Let’s change our code above to execute the Console function with a value to match how we use the Angular decorators.`
+<pre>
+@Console('Hey!')
+class ExampleClass {
+  constructor() {
+    console.log('Yo!');
+  }
+}
+</pre>
+
+
+`If we ran this code now, we’d only get 'Hey!' outputted to the console. That’s because our decorator hasn’t returned a function for the class to be given to. The output of @Console('Hey!') is void.`
+
+`We would need to adapt our Console decorator to return a function closure for the class to be given to. That way we can both receive a value from the decorator (in our case, the string Hey!) and also the class that it’s applied to:`
+
+<pre>
+function Console(message) {
+  // access the "metadata" message
+  console.log(message);
+  // return a function closure, which
+  // is passed the class as `target`
+  return function(target) {
+    console.log('Our decorated class', target);
+  };
+}
+
+@Console('Hey!')
+class ExampleClass {
+  constructor() {
+    console.log('Yo!');
+  }
+}
+</pre>
