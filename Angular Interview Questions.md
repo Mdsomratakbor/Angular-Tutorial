@@ -120,3 +120,8 @@ transform(items: any, filter: any, isAnd: boolean): any {
 
 </pre>
 
+### 14. What are Pure Pipes? 
+`These pipes are pipes that use pure functions. As a result of this, a pure pipe doesn't use any internal state, and the output remains the same as long as the parameters passed stay the same. Angular calls the pipe only when it detects a change in the parameters being passed. A single instance of the pure pipe is used throughout all components.`
+
+
+
