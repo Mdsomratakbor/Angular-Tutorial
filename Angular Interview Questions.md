@@ -123,5 +123,13 @@ transform(items: any, filter: any, isAnd: boolean): any {
 ### 14. What are Pure Pipes? 
 `These pipes are pipes that use pure functions. As a result of this, a pure pipe doesn't use any internal state, and the output remains the same as long as the parameters passed stay the same. Angular calls the pipe only when it detects a change in the parameters being passed. A single instance of the pure pipe is used throughout all components.`
 
+### 15. What are Impure Pipes?
+`For every change detection cycle in Angular, an impure pipe is called regardless of the change in the input fields. Multiple pipe instances are created for these pipes. Inputs passed to these pipes can be mutable.` 
 
-
+`By default, all pipes are pure. However, you can specify impure pipes using the pure property, as shown below.`
+<pre>
+@Pipe({
+  name: 'demopipe',
+  pure : true/false 
+})
+</pre>
