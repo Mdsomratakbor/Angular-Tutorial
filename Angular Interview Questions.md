@@ -133,3 +133,16 @@ transform(items: any, filter: any, isAnd: boolean): any {
   pure : true/false 
 })
 </pre>
+
+### 16. What is an ngModule?
+`NgModules are containers that reserve a block of code to an application domain or a workflow. @NgModule takes a metadata object that generally describes the way to compile the template of a component and to generate an injector at runtime. In addition, it identifies the module's components, directives, and pipes, making some of them public, through the export property so that external components can use them.`
+
+### 17. What are filters in Angular? Name a few of them.
+`Filters are used to format an expression and present it to the user. They can be used in view templates, controllers, or services. Some inbuilt filters are as follows.` 
+
+- date - Format a date to a specified format.
+- filter - Select a subset of items from an array.
+- Json - Format an object to a JSON string.
+- limitTo -  Limits an array/string, into a specified number of elements/characters.
+- lowercase - Format a string to lowercase.
+
