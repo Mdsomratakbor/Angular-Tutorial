@@ -55,3 +55,9 @@ Decorators are a design pattern or functions that define how Angular features wo
 - `Smaller Angular framework download size`
 - `Quick detection of template errors`
 - `Better security`
+
+### 11. What are Components in Angular?
+Components Heirarchy
+<img width="915" alt="Components_Heirarchy-Angular_Components" src="https://user-images.githubusercontent.com/53125546/175920669-cddccb52-d699-4994-8673-57e5bc50d6fb.png">
+
+`Components are the basic building blocks of the user interface in an Angular application. Every component is associated with a template and is a subset of directives. An Angular application typically consists of a root component, which is the AppComponent, that then branches out into other components creating a hierarchy.`
