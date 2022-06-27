@@ -65,6 +65,8 @@ Components Heirarchy
 
 ### 12. What are Pipes in Angular? 
 
+<img width="340" alt="Angular_Pipes" src="https://user-images.githubusercontent.com/53125546/175921137-be7b5140-d67f-42e2-b778-b410b9f49c66.png">
+
 `Pipes are simple functions designed to accept an input value, process, and return as an output, a transformed value in a more technical understanding. Angular supports several built-in pipes. However, you can also create custom pipes that cater to your needs.`
 
 `Some key features include:`
@@ -72,3 +74,49 @@ Components Heirarchy
 - 1. Pipes are defined using the pipe “|” symbol. 
 - 2. Pipes can be chained with other pipes.
 - 3. Pipes can be provided with arguments by using the colon (:) sign.
+
+
+### 13. What is the PipeTransform interface?
+
+`As the name suggests, the interface receives an input value and transforms it into the desired format with a transform() method. It is typically used to implement custom pipes.`
+
+<pre>
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: "filter",
+})
+export class FilterPipe implements PipeTransform {
+transform(items: any, filter: any, isAnd: boolean): any {
+    if (filter && Array.isArray(items)) {
+      let filterKeys = Object.keys(filter);
+      if (isAnd) {
+        return items.filter((item) =>
+          filterKeys.reduce(
+            (memo, keyName) =>
+              (memo && new RegExp(filter[keyName], "gi").test(item[keyName])) ||
+              filter[keyName] === "" ||
+              filter[keyName] === null,
+            true
+          )
+        );
+      } else {
+        return items.filter(item => {
+          return filterKeys.some((keyName) => {
+            console.log(keyName);
+            return (
+              new RegExp(filter[keyName], "gi").test(item[keyName]) ||
+              filter[keyName] === "" ||
+              filter[keyName] === null
+            );
+          });
+        });
+      }
+    } else {
+      return items;
+    }
+  }
+}
+
+</pre>
+
