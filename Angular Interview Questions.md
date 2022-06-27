@@ -45,3 +45,13 @@ Decorators are a design pattern or functions that define how Angular features wo
 - 2.Structural Directives
 - 3.Attribute Directives 
 
+### 10. What is an AOT compilation? What are its advantages?
+`The Ahead-of-time (AOT) compiler converts the Angular HTML and TypeScript code into JavaScript code during the build phase, i.e., before the browser downloads and runs the code.`
+
+`Some of its advantages are as follows.`
+
+- `Faster rendering`
+- `Fewer asynchronous requests`
+- `Smaller Angular framework download size`
+- `Quick detection of template errors`
+- `Better security`
