@@ -30,3 +30,10 @@ Decorators are a design pattern or functions that define how Angular features wo
 **Modules:** `Angular consists of different design patterns like components, directives, pipes, and services, which help in the smooth creation of applications.`
 **Dependency injection:** `Components dependent on other components can be easily worked around using this feature.` 
 `Other generic advantages include clean and maintainable code, unit testing, reusable components, data binding, and excellent responsive experience.`
+
+### 7. What are Templates in Angular?
+
+`Angular Templates are written with HTML that contains Angular-specific elements and attributes. In combination with the model and controller's information, these templates are further rendered to provide a dynamic view to the user.`
+
+
+
