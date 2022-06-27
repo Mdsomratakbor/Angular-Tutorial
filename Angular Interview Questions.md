@@ -146,3 +146,11 @@ transform(items: any, filter: any, isAnd: boolean): any {
 - limitTo -  Limits an array/string, into a specified number of elements/characters.
 - lowercase - Format a string to lowercase.
 
+### 18. What is view encapsulation in Angular?
+
+`View encapsulation defines whether the template and styles defined within the component can affect the whole application or vice versa. Angular provides three encapsulation strategies:`
+
+- `Emulated - styles from the main HTML propagate to the component.`
+- `Native - styles from the main HTML do not propagate to the component.`
+- `None - styles from the component propagate back to the main HTML and therefore are visible to all components on the page.`
+
