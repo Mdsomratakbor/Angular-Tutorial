@@ -35,5 +35,13 @@ Decorators are a design pattern or functions that define how Angular features wo
 
 `Angular Templates are written with HTML that contains Angular-specific elements and attributes. In combination with the model and controller's information, these templates are further rendered to provide a dynamic view to the user.`
 
+### 8. What are Annotations in Angular?
+`Annotations in Angular are used for creating an annotation array. They are the metadata set on the class that is used to reflect the Metadata library.`
 
+### 9. What are Directives in Angular?
+`Directives are attributes that allow the user to write new HTML syntax specific to their applications. They execute whenever the Angular compiler finds them in the DOM. Angular supports three types of directives.`  
+
+- 1.Component Directives
+- 2.Structural Directives
+- 3.Attribute Directives 
 
