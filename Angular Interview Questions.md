@@ -154,3 +154,9 @@ transform(items: any, filter: any, isAnd: boolean): any {
 - `Native - styles from the main HTML do not propagate to the component.`
 - `None - styles from the component propagate back to the main HTML and therefore are visible to all components on the page.`
 
+
+### 19. What are controllers?
+`AngularJS controllers control the data of AngularJS applications. They are regular JavaScript Objects. The ng-controller directive defines the application controller.`
+
+### 20. What do you understand by scope in Angular?
+`The scope in Angular binds the HTML, i.e., the view, and the JavaScript, i.e., the controller. It as expected is an object with the available methods and properties. The scope is available for both the view and the controller. When you make a controller in Angular, you pass the $scope object as an argument.` 
