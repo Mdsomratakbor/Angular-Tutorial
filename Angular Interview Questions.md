@@ -61,3 +61,14 @@ Components Heirarchy
 <img width="915" alt="Components_Heirarchy-Angular_Components" src="https://user-images.githubusercontent.com/53125546/175920669-cddccb52-d699-4994-8673-57e5bc50d6fb.png">
 
 `Components are the basic building blocks of the user interface in an Angular application. Every component is associated with a template and is a subset of directives. An Angular application typically consists of a root component, which is the AppComponent, that then branches out into other components creating a hierarchy.`
+
+
+### 12. What are Pipes in Angular? 
+
+`Pipes are simple functions designed to accept an input value, process, and return as an output, a transformed value in a more technical understanding. Angular supports several built-in pipes. However, you can also create custom pipes that cater to your needs.`
+
+`Some key features include:`
+
+- 1. Pipes are defined using the pipe “|” symbol. 
+- 2. Pipes can be chained with other pipes.
+- 3. Pipes can be provided with arguments by using the colon (:) sign.
