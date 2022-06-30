@@ -214,3 +214,21 @@ https://www.simplilearn.com/ice9/free_resources_article_thumb/Angular_Services.P
 **Promises** - `They emit a single value at a time. They execute immediately after creation and are not cancellable. They are Push errors to the child promises.` 
 
 **Observables** - `They are only executed when subscribed to them using the subscribe() method. They emit multiple values over a period of time. They help perform operations like forEach, filter, and retry, among others. They deliver errors to the subscribers. When the unsubscribe() method is called, the listener stops receiving further values.`
+
+### 28. What is ngOnInit? How is it defined? 
+
+`ngOnInit is a lifecycle hook and a callback method that is run by Angular to indicate that a component has been created. It takes no parameters and returns a void type.`
+<pre>
+
+export class MyComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+
+    //....
+
+  }
+
+}
+</pre>
