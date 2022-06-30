@@ -159,4 +159,17 @@ transform(items: any, filter: any, isAnd: boolean): any {
 `AngularJS controllers control the data of AngularJS applications. They are regular JavaScript Objects. The ng-controller directive defines the application controller.`
 
 ### 20. What do you understand by scope in Angular?
-`The scope in Angular binds the HTML, i.e., the view, and the JavaScript, i.e., the controller. It as expected is an object with the available methods and properties. The scope is available for both the view and the controller. When you make a controller in Angular, you pass the $scope object as an argument.` 
+`The scope in Angular binds the HTML, i.e., the view, and the JavaScript, i.e., the controller. It as expected is an object with the available methods and properties. The scope is available for both the view and the controller. When you make a controller in Angular, you pass the $scope object as an argument.`
+
+### 21. Explain the lifecycle hooks in Angular?
+
+`In Angular, every component has a lifecycle. Angular creates and renders these components and also destroys them before removing them from the DOM. This is achieved with the help of lifecycle hooks. Here's the list of them -`
+
+- **ngOnChanges() -** `Responds when Angular sets/resets data-bound input properties.`
+- **ngOnInit() -** `Initialize the directive/component after Angular first displays the data-bound properties and sets the directive/component's input properties/`
+- **ngDoCheck() -** `Detect and act upon changes that Angular can't or won't detect on its own.`
+- **ngAfterContentInit() -** `Responds after Angular projects external content into the component's view.`
+- **ngAfterContentChecked() -** `Respond after Angular checks the content projected into the component.`
+- **ngAfterViewInit() -** `Respond after Angular initializes the component's views and child views.`
+- **ngAfterViewChecked() -** `Respond after Angular checks the component's views and child views.`
+- **ngOnDestroy -** `Cleanup just before Angular destroys the directive/component.`
