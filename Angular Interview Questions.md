@@ -188,3 +188,29 @@ For example,
 <button (click)="deleteHero()"> Delete hero </button>
 </pre>
 The template here is deleteHero. The method is called when the user clicks on the button.
+
+### 24. What is the difference between AOT and JIT? 
+`Ahead of Time (AOT) compilation converts your code during the build time before the browser downloads and runs that code. This ensures faster rendering to the browser. To specify AOT compilation, include the --aot option with the ng build or ng serve command.`
+
+`The Just-in-Time (JIT) compilation process is a way of compiling computer code to machine code during execution or run time. It is also known as dynamic compilation. JIT compilation is the default when you run the ng build or ng serve CLI commands.` 
+
+### 25. Explain the @Component Decorator?
+
+`TypeScript class is one that is used to create components. This genre of class is then decorated with the "@Component" decorator. The decorato’s purpose is to accept a metadata object that provides relevant information about the component.`
+
+![image](https://user-images.githubusercontent.com/53125546/176659824-15dd491b-18d9-4231-ac3e-2894fe355e2b.png)
+
+`The image above shows an App component - a pure TypeScript class decorated with the “@Component” decorator. The metadata object that gets accepted by the decorator provides properties like templateUrl, selector, and others, where the templateUrL property points to an HTML file defining what you see on the application.`
+
+### 26. What are Services in Angular? 
+
+`Angular Services perform tasks that are used by multiple components. These tasks could be data and image fetching, network connections, and database management among others. They perform all the operational tasks for the components and avoid rewriting of code. A service can be written once and injected into all the components that use that service.` 
+
+https://www.simplilearn.com/ice9/free_resources_article_thumb/Angular_Services.PNG
+
+### 27. What are Promises and Observables in Angular? 
+`While both the concepts deal with Asynchronous events in Angular, Promises handle one such event at a time while observables handle a sequence of events over some time.`
+
+**Promises** - `They emit a single value at a time. They execute immediately after creation and are not cancellable. They are Push errors to the child promises.` 
+
+**Observables** - `They are only executed when subscribed to them using the subscribe() method. They emit multiple values over a period of time. They help perform operations like forEach, filter, and retry, among others. They deliver errors to the subscribers. When the unsubscribe() method is called, the listener stops receiving further values.`
