@@ -267,3 +267,10 @@ The * before ngFor creates a parent template.`
 `Eager loading is the default module-loading strategy. Feature modules under Eager loading are loaded before the application starts. This is typically used for small size applications.`
 
 `Lazy loading dynamically loads the feature modules when there's a demand. This makes the application faster. It is used for bigger applications where all the modules are not required at the start of the application.`
+
+### 32. What type of DOM does Angular implement? 
+`DOM (Document Object Model) treats an XML or HTML document as a tree structure in which each node is an object representing a part of the document.`
+
+`Angular uses the regular DOM. This updates the entire tree structure of HTML tags until it reaches the data to be updated. However, to ensure that the speed and performance are not affected, Angular implements Change Detection.`
+
+`With this, you have reached the end of the article. We highly recommend brushing up on the core concepts for an interview. It’s always an added advantage to write the code in places necessary.` 
