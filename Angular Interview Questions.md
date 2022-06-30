@@ -177,5 +177,14 @@ transform(items: any, filter: any, isAnd: boolean): any {
 ### 22. What is String Interpolation in Angular?
 `String Interpolation is a one-way data-binding technique that outputs the data from TypeScript code to HTML view. It is denoted using double curly braces. This template expression helps display the data from the component to the view.`
 <pre>
-<span>{{ data }}<span>
+<span>{{ data }}</span>
 </pre>
+
+### 23. What are Template statements?
+Template statements are properties or methods used in HTML for responding to user events. With these template statements, the application that you create or are working on, can have the capability to engage users through actions such as submitting forms and displaying dynamic content.
+
+For example, 
+
+<button (click)="deleteHero()">Delete hero</button>
+
+The template here is deleteHero. The method is called when the user clicks on the button.
