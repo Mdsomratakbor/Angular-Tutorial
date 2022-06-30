@@ -173,3 +173,9 @@ transform(items: any, filter: any, isAnd: boolean): any {
 - **ngAfterViewInit() -** `Respond after Angular initializes the component's views and child views.`
 - **ngAfterViewChecked() -** `Respond after Angular checks the component's views and child views.`
 - **ngOnDestroy -** `Cleanup just before Angular destroys the directive/component.`
+
+### 22. What is String Interpolation in Angular?
+`String Interpolation is a one-way data-binding technique that outputs the data from TypeScript code to HTML view. It is denoted using double curly braces. This template expression helps display the data from the component to the view.`
+<pre>
+<span>{{ data }}<span>
+</pre>
