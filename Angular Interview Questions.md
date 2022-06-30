@@ -184,7 +184,7 @@ transform(items: any, filter: any, isAnd: boolean): any {
 Template statements are properties or methods used in HTML for responding to user events. With these template statements, the application that you create or are working on, can have the capability to engage users through actions such as submitting forms and displaying dynamic content.
 
 For example, 
-
-<button (click)="deleteHero()">Delete hero</button>
-
+<pre>
+<button (click)="deleteHero()"> Delete hero </button>
+</pre>
 The template here is deleteHero. The method is called when the user clicks on the button.
