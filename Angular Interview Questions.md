@@ -235,11 +235,11 @@ export class MyComponent implements OnInit {
 
 ### 29. How to use ngFor in a tag? 
 `The ngFor directive is used to build lists and tables in the HTML templates. In simple terms, this directive is used to iterate over an array or an object and create a template for each element. `
-<pre>
+
 <ul> 
       <li *ngFor = "let items in itemlist"> {{ item }} </li>
 </ul>
-</pre>
+
 
 `“Let item” creates a local variable that will be available in the template
 “Of items” indicates that we are iterating over the items iterable. 
