@@ -262,3 +262,8 @@ The * before ngFor creates a parent template.`
 - `Reactive forms break from the traditional declarative approach.`
 - `Reactive forms eliminate the anti-pattern of updating the data model via two-way data binding.`
 - `Typically, Reactive form control creation is synchronous and can be unit tested with synchronous programming techniques.`
+
+### 31. What is Eager and Lazy loading? 
+`Eager loading is the default module-loading strategy. Feature modules under Eager loading are loaded before the application starts. This is typically used for small size applications.`
+
+`Lazy loading dynamically loads the feature modules when there's a demand. This makes the application faster. It is used for bigger applications where all the modules are not required at the start of the application.`
