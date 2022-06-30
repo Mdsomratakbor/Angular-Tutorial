@@ -244,3 +244,21 @@ export class MyComponent implements OnInit {
 `“Let item” creates a local variable that will be available in the template
 “Of items” indicates that we are iterating over the items iterable. 
 The * before ngFor creates a parent template.`
+
+### 30. What are Template and Reactive forms?
+**Template-driven approach**
+
+- `In this method, the conventional form tag is used to create forms. Angular automatically interprets and creates a form object representation for the tag.` 
+- `Controls can be added to the form using the NGModel tag. Multiple controls can be grouped using the NGControlGroup module.`
+- `A form value can be generated using the “form.value” object. Form data is exported as JSON values when the submit method is called.` 
+- `Basic HTML validations can be used to validate the form fields. In the case of custom validations, directives can be used.` 
+- `Arguably, this method is the simplest way to create an Angular App.`
+ 
+**Reactive Form Approach**
+
+- `This approach is the programming paradigm oriented around data flows and propagation of change.` 
+- `With Reactive forms, the component directly manages the data flows between the form controls and the data models.` 
+- `Reactive forms are code-driven, unlike the template-driven approach.` 
+- `Reactive forms break from the traditional declarative approach.`
+- `Reactive forms eliminate the anti-pattern of updating the data model via two-way data binding.`
+- `Typically, Reactive form control creation is synchronous and can be unit tested with synchronous programming techniques.`
