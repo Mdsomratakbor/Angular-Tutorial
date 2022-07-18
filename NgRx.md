@@ -15,3 +15,6 @@
 
 ### 5.  What are Actions in NgRX?
 `Actions are one of the main building blocks in NgRx. Actions express unique events that happen throughout your application. Actions are objects that extend the NgRx Action class with a 'type' property. They have an optional 'payload' property (naming is up to you but the standard is to name it 'payload') for sending in data to the effect/reducer and are dispatched by the store to either run an effect or change state in a reducer.`
+
+### 6. What are States in NgRX?
+`State is a single, immutable data structure. Actions describe state changes. Pure functions called reducers take the previous state and the next action to compute the new state. State accessed with the Store , an observable of state and an observer of actions.`
