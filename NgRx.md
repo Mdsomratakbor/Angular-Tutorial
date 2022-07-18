@@ -12,3 +12,6 @@
 
 ### 4. What is the difference between NgRX and RxJS?
 `Ngrx is a redux implementation usingrxjs. Rxjs is for handling complex asynchronous work like handling communication between client and server. Ngrx is for optimally storing data in the client and recalling them from all over the application, usually.`
+
+### 5.  What are Actions in NgRX?
+`Actions are one of the main building blocks in NgRx. Actions express unique events that happen throughout your application. Actions are objects that extend the NgRx Action class with a 'type' property. They have an optional 'payload' property (naming is up to you but the standard is to name it 'payload') for sending in data to the effect/reducer and are dispatched by the store to either run an effect or change state in a reducer.`
