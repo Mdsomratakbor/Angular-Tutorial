@@ -2,7 +2,7 @@
 
 **Both Promises and Observables provide us with abstractions that help us deal with the asynchronous nature of our applications.**
 
-`Some Difference Below: `
+`Below are some Difference: `
 
 <table><tbody><tr><td style="width: 312px;"><strong>Observables</strong></td><td style="width: 312px;"><strong>Promises</strong></td></tr><tr><td style="width: 312px;">Emit multiple values over a period of time.</td><td style="width: 312px;">Emit a single value at a time.</td></tr><tr><td style="width: 312px;">Are lazy: they’re not executed until we subscribe to them using the subscribe() method.</td><td style="width: 312px;">Are not lazy: execute immediately after creation.</td></tr><tr><td style="width: 312px;">Have subscriptions that are cancellable using the unsubscribe() method, which stops the listener from receiving further values.</td><td style="width: 312px;">Are not cancellable.</td></tr><tr><td style="width: 312px;">Provide the map for forEach, filter, reduce, retry, and retryWhen operators.</td><td style="width: 312px;">Don’t provide any operations.</td></tr><tr><td style="width: 312px;">Deliver errors to the subscribers.</td><td style="width: 312px;">Push errors to the child promises.</td></tr></tbody></table>
 
