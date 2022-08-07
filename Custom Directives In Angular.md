@@ -85,3 +85,8 @@ import { HighlightDirective } from './directives/highlight.directive';
 export class AppModule { }
 
 </pre>
+
+`Now we are going to use our newly created custom directive. I am adding the` **Hightlight** `directive in the` **app.component.html** `but you can use it anywhere in the application.`
+<pre>
+<p ChangeTextBackground>home works!</p>
+</pre>
