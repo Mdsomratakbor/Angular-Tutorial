@@ -129,3 +129,11 @@ It sends data from one component to the other using property binding.`
 `ViewContainerRef is a container where one or more views can be attached. We can use createEmbeddedView() function to attach the embedded templates in the container.`
 
 `Now to get the` **NgIfCustome** `directive to work, we need to add our directive to the declarations array in the app.module.ts file.`
+
+`Now used this directives like below this code`
+
+<pre>
+<button (click)="changeStatus()"> Change Status</button>
+<p *NgIfCustome="isStatus">True</p>
+<p *NgIfCustome="!isStatus">False</p>
+</pre>
