@@ -90,3 +90,42 @@ export class AppModule { }
 <pre>
 <p ChangeTextBackground>home works!</p>
 </pre>
+
+### Creating a Custom Structural Directive
+`In the previous section, we created our first Attribute directive. The same approach is used to create the structural directive as well.`
+
+`So, let’s get started with creating our structural directive. In this directive, we are going to implement the` ***NgIfCustome** `directive which will work just opposite of *ngIf.`
+
+`Now create a app-not.directive.ts file in the src/app folder and add the code below.`
+
+<pre>
+import { Template } from '@angular/compiler/src/render3/r3_ast';
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+
+@Directive({
+  selector: '[NgIfCustome]'
+})
+export class NgIfCustomeDirective {
+
+  constructor(private templateRef: TemplateRef<any>, private viewContainer: ViewContainerRef) { }
+@Input() set NgIfCustome(condition: boolean){
+  if(!condition){
+    this.viewContainer.createEmbeddedView(this.templateRef);
+  }
+  else{
+    this.viewContainer.clear();
+  }
+}
+}
+</pre>
+
+`As you saw in the above code snippet, we are importing Directive, Input, TemplateRef and ViewContainerRef from @angular/core.`
+
+`Directive provides the same functionality for the @Directive decorator. The Input decorator is used to communicate between the two components. 
+It sends data from one component to the other using property binding.`
+
+`TemplateRef represents the embedded template which is used to instantiate the embedded views. These embedded views are linked to the template which is to be rendered.`
+
+`ViewContainerRef is a container where one or more views can be attached. We can use createEmbeddedView() function to attach the embedded templates in the container.`
+
+`Now to get the` **NgIfCustome** `directive to work, we need to add our directive to the declarations array in the app.module.ts file.`
