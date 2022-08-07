@@ -32,3 +32,56 @@ export class HighlightDirective {
 
 }
 </pre>
+
+`Here, we are importing Directive and ElementRef from Angular core. The Directive provides the functionality of @Directive decorator in which we provide its property selector to` **Highlight** `so that we can use this selector anywhere in the application. We are also importing the ElementRef which is responsible for accessing the DOM element.`
+
+`Now to get` **Highlight** `Directive to work, we need to add our Directive to the declarations array in the` **app.module.ts** `file.`
+
+<pre>
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CounterComponent } from './counter/counter/counter.component';
+import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
+import { CounterButtonsComponent } from './counter/counter-buttons/counter-buttons.component';
+import { StoreModule } from '@ngrx/store';
+import { CustomCounterInputComponent } from './counter/custom-counter-input/custom-counter-input.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './Shared/Components/header/header.component';
+import { PostComponent } from './posts/post/post.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
+import { appReducer } from './counter/store/state/app.state';
+import { HighlightDirective } from './directives/highlight.directive';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CounterComponent,
+    CounterOutputComponent,
+    CounterButtonsComponent,
+    CustomCounterInputComponent,
+    HomeComponent,
+    HeaderComponent,
+    PostComponent,
+    HighlightDirective
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    StoreDevtoolsModule.instrument({
+      logOnly: environment.production,
+    }),
+    
+    StoreModule.forRoot(appReducer)
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+</pre>
