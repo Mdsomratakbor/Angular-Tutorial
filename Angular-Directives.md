@@ -31,3 +31,8 @@ export class AppComponent {
     name: string = "Angular 2"  
 }  
 </pre>
+
+### What is attribute directive?
+
+- `It is mainly used to change/modify the behavior of the html element.`
+- `As the name tells, it is used to change the attributes of the existing html element.There are many built in attribute directives. Some of the useful ones are NgClass, NgStyle`
