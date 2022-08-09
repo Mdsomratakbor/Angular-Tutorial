@@ -69,3 +69,18 @@
 
 `‘Source-map-explorer’ is a tool which is used to inspect the JavaScript bundles. This tool analyzes the source map generated with the bundle and draws a map of all dependencies. It can be installed in Angular project by following command in CLI.`
 
+<pre>npm install source-map-explorer — save-dev</pre>
+
+`Once the tool is installed, do the development build using ng build command Once the build is completed, execute the following command.`
+
+**node_modules\.bin\source-map-explorer dist\vendor.bundle.js**
+
+`The above command runs the source-map-explorer against the vendor bundle and we see the graph of it in browser. Notice the angular compiler is around 45% percent of the bundle size.`
+
+![image](https://user-images.githubusercontent.com/53125546/183731398-4fc4f14c-6737-43e4-919a-2215e5668448.png)
+
+`Now run the above command after executing AOT compilation command in Angular CLI. We observe that the overall size of vendor.bundle.js file reduced by half.`
+
+![image](https://user-images.githubusercontent.com/53125546/183731582-d6ba8b24-b4ad-43bc-90c1-fbce3a099391.png)
+
+`Hence AOT compilation is very much recommended during the deployment of application in a production server.`
