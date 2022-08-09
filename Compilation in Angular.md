@@ -14,3 +14,5 @@
 - **3) main.bundle.js — Contains code present in all the files of application.**
 - **4) styles.bundle.js — Contains styles used by the application.**
 - **5) vendor.bundle.js — Contains all Angular + 3rd party libraries in it.**
+
+https://miro.medium.com/max/1270/1*x11WYxF-c4wxJTVX7L_Pdg.png
