@@ -65,3 +65,7 @@
 
 - 3. `In this, template binding errors were detected during build process of the application. Hence template errors were identified earlier.`
 
+### Inspect the JavaScript bundles?
+
+`‘Source-map-explorer’ is a tool which is used to inspect the JavaScript bundles. This tool analyzes the source map generated with the bundle and draws a map of all dependencies. It can be installed in Angular project by following command in CLI.`
+
