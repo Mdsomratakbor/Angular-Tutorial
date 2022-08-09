@@ -17,3 +17,8 @@
 
 ![image](https://user-images.githubusercontent.com/53125546/183726994-3419c597-d4e5-430c-bc61-0799a93917a2.png)
 ![image](https://user-images.githubusercontent.com/53125546/183727064-c62a8d95-64cc-4260-8f90-cd8ea0b6ab82.png)
+
+**Differences:**
+
+1. **ng-serve:** `Compiles and runs the application from the memory and as a result it is only used during the development process. It doesn’t write the build files to any folder. Hence this process cannot be used to deploy in another server.`
+2. **ng-build:** `Compiles the application and produces the build files to an external folder. The name of the output folder is decided by the value of outputPath property present in the ‘build’ section in ‘angular.json’ file. As a result this output folder generated at the end can be used to deploy in any external server.`
