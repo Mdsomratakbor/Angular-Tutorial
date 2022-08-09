@@ -29,3 +29,14 @@
 
 -  1. `JIT (Just In Time) Compilation`
 -  2. `AOT (Ahead of Time) Compilation`
+
+`Until Angular 8, JIT compilation is the default compilation. Since Angular 9, AOT Compilation is the default mode of compilation. When the ng-serve or ng-build command executes, type of compilation depends on the ‘aot’ value present in the respective sections in ‘angular.json’ file.`
+
+![image](https://user-images.githubusercontent.com/53125546/183727894-393464ce-32ab-435a-9a6d-b5ab7bf6443a.png)
+
+**[Note: Also AOT compilation can be done using Angular cli by setting ‘aot’ flag to true in Angular CLI]**
+
+- 1.`ng serve — aot=true`
+
+- 2.`ng build — aot=true`
+
