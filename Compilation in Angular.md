@@ -15,4 +15,5 @@
 - **4) styles.bundle.js — Contains styles used by the application.**
 - **5) vendor.bundle.js — Contains all Angular + 3rd party libraries in it.**
 
-https://miro.medium.com/max/1270/1*x11WYxF-c4wxJTVX7L_Pdg.png
+![image](https://user-images.githubusercontent.com/53125546/183726994-3419c597-d4e5-430c-bc61-0799a93917a2.png)
+![image](https://user-images.githubusercontent.com/53125546/183727064-c62a8d95-64cc-4260-8f90-cd8ea0b6ab82.png)
