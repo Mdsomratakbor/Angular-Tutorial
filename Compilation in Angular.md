@@ -40,3 +40,28 @@
 
 - 2.`ng build — aot=true`
 
+
+### 1. JIT Compilation:
+
+`As the name suggests, compilation is done during the run time of application. Browser downloads the compiler along with application files. Compiler is about 45% of the size of vendor.bundle.js file which was loaded in the browser.`
+
+ **Disadvantages:**
+
+- 1. `User has to wait for the compiler to load in the browser first and then application loads. Hence waiting time is increased.`
+
+- 2. `The size of the application is increased due to presence of compiler which will effect the overall performance of the application during runtime.`
+
+- 3. `In this, template binding errors were not detected i.e. the compiler doesn’t throw any error during the build process.`
+
+### 2. AOT Compilation:
+
+`In this process, compilation is done during the build process and compiled files which were bundled, downloaded by the browser. As compilation is already done, vendor.bundle.js file doesn’t contain compiler code and hence it’s size decreases by nearly 50%.`
+
+**Advantages :**
+
+- 1. `Faster rendering of application with AOT as the browser downloads only pre-compiled version of the application. The browser loads executable code so it can render the application immediately, without waiting to compile the app first.`
+
+- 2. `Smaller downloading size of application. There’s no need to download the Angular compiler if the app is already compiled. The compiler is roughly half of Angular itself, so omitting it dramatically reduces the application payload.`
+
+- 3. `In this, template binding errors were detected during build process of the application. Hence template errors were identified earlier.`
+
