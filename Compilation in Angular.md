@@ -22,3 +22,10 @@
 
 1. **ng-serve:** `Compiles and runs the application from the memory and as a result it is only used during the development process. It doesn’t write the build files to any folder. Hence this process cannot be used to deploy in another server.`
 2. **ng-build:** `Compiles the application and produces the build files to an external folder. The name of the output folder is decided by the value of outputPath property present in the ‘build’ section in ‘angular.json’ file. As a result this output folder generated at the end can be used to deploy in any external server.`
+
+![image](https://user-images.githubusercontent.com/53125546/183727538-db6e7b9b-83d8-48d1-9e57-a27b90bc255a.png)
+
+**In Angular, we have 2 modes of compilation:**
+
+-  1. `JIT (Just In Time) Compilation`
+-  2. `AOT (Ahead of Time) Compilation`
