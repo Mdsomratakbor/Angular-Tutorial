@@ -320,19 +320,34 @@ Here’s the complete answer to all questions from the document:
 
 ### **Behavioral and Situational Questions:**
 
-71. **Can you describe a challenging problem you solved using TypeScript?**  
-    Discuss a real-world project where TypeScript helped solve a specific issue, such as handling complex types or reducing runtime errors.
+1. **Can you describe a challenging problem you solved using TypeScript?**  
+   In one project, we were handling a complex API response that included deeply nested objects and optional fields. Initially, we used plain JavaScript, which resulted in frequent runtime errors due to missing or unexpected fields. Refactoring the codebase to TypeScript allowed us to define strict types for the API response, including optional and nullable fields. By leveraging TypeScript’s `Partial<T>` and `Nullable<T>`, we reduced runtime errors significantly. The codebase became more predictable, and errors were caught at compile-time, allowing us to fix potential issues before deployment. This improved the overall stability of the application.
 
-72. **How do you stay updated with the latest TypeScript features and best practices?**  
-    Follow TypeScript blogs, GitHub releases, attend conferences, and stay active in the developer community.
+2. **How do you stay updated with the latest TypeScript features and best practices?**  
+   I stay updated by following TypeScript's official blog, reading release notes from GitHub for each new version, and staying active in TypeScript and JavaScript communities like Stack Overflow, Reddit, and Dev.to. I also subscribe to newsletters such as JavaScript Weekly, and I attend developer conferences and meetups whenever possible. Additionally, I frequently experiment with new TypeScript features in side projects and follow courses or workshops that focus on advanced TypeScript concepts.
 
-73. **How would you refactor a large JavaScript codebase to TypeScript?**  
-    Start by adding TypeScript gradually, converting files to `.ts` one by one, and using `any` where necessary. Focus on adding types over time.
+3. **How would you refactor a large JavaScript codebase to TypeScript?**  
+   When refactoring a large JavaScript codebase to TypeScript, I would adopt an incremental approach:
+   - First, I’d configure TypeScript in the project, setting up `tsconfig.json` with minimal settings (`allowJs`, `checkJs`).
+   - I’d then convert files one at a time, starting with the core parts of the application. 
+   - Gradually, I would replace `.js` files with `.ts` files and begin adding explicit types to function parameters, return values, and complex objects.
+   - For libraries without types, I would use `@types` packages or declare my own custom types.
+   - To ensure smooth migration, I’d use `any` sparingly and refactor it over time to more specific types.
+   - Throughout this process, I’d run the application’s test suite to ensure that the refactor does not introduce any breaking changes.
 
-74. **Can you describe your experience with TypeScript in a team environment?**  
-    Discuss collaboration, code reviews, and how TypeScript improves team productivity by making the codebase more predictable and robust.
+4. **Can you describe your experience with TypeScript in a team environment?**  
+   Working with TypeScript in a team environment has greatly improved our collaboration. By using TypeScript, we are able to catch errors earlier in the development process. It enforces a shared understanding of data structures and reduces miscommunication about expected inputs and outputs. In code reviews, it has simplified discussions about function contracts and allowed the team to focus more on logic than on guessing types. TypeScript’s autocompletion and error highlighting have made the development process faster and more reliable, which in turn has improved our productivity as a team. We also use code-sharing features such as interfaces across modules to ensure consistency.
 
-75. **What strategies do you use to ensure code quality and consistency in TypeScript projects?**  
-    Use linters (like ESLint), type-checking tools, formatters (like Prettier), and follow a consistent coding style.
+5. **What strategies do you use to ensure code quality and consistency in TypeScript projects?**  
+   To ensure code quality and consistency in TypeScript projects, I implement several strategies:
+   - **Linters**: I use ESLint with TypeScript-specific plugins to enforce consistent code style and catch potential bugs.
+   - **Type-checking**: I run TypeScript’s type checker (`tsc`) as part of our CI pipeline to catch any type issues before merging.
+   - **Formatters**: I use Prettier to maintain consistent code formatting across the entire project.
+   - **Code reviews**: I encourage regular code reviews, where TypeScript’s static types help in understanding the code quickly and ensure that best practices are being followed.
+   - **Automated tests**: I use tools like Jest to write unit tests, making sure types are correctly enforced and that new changes don’t break the existing logic.
+   - **Strict Mode**: I enable TypeScript’s `strict` mode for more robust type checking.
+   - **Documentation**: I maintain clear documentation and consistent naming conventions to make the code easier to navigate and maintain.
+
+These strategies collectively help to maintain high standards of code quality in TypeScript projects.
 
 ---
