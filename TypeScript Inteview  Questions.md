@@ -202,9 +202,7 @@ Here’s the complete answer to all questions from the document:
 41. **How do you enforce immutability in TypeScript?**  
     Use `readonly` for properties and `ReadonlyArray<T>` for arrays to prevent modification.
 
-42. **How do you implement advanced type-safe patterns such as builders or factories
-
- in TypeScript?**  
+42. **How do you implement advanced type-safe patterns such as builders or factories in TypeScript?**  
     Use generics, mapped types, and utility types to implement builders or factory patterns.
 
 43. **What are template literal types in TypeScript, and how are they useful?**  
