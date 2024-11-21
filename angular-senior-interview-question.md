@@ -136,7 +136,3 @@ For scenarios with different designs for clients (e.g., USA and Europe):
 Deploy the builds to respective servers.
 
 --- 
-
-### Contribution
-
-Feel free to contribute to this document by suggesting improvements or sharing additional insights.
