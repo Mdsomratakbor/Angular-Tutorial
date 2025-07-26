@@ -1,0 +1,12 @@
+<mat-nav-list>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let group of menu">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ group.version }}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-list-item *ngFor="let feature of group.features" [routerLink]="feature.route">
+        {{ feature.name }}
+      </a>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-nav-list>
