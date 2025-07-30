@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './control-flow.scss'
 })
 export class ControlFlow {
+  isLoggedIn = false
+  items = ['Angular', 'React', 'Vue'];
+  status = 'loading';
 
 }

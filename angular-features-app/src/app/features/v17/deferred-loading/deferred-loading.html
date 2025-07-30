@@ -1,1 +1,48 @@
-<p>deferred-loading works!</p>
+<mat-tab-group>
+
+    <!-- Tab 1: @mouse click -->
+    <mat-tab label="Load Card By Mouse Click">
+        <div class="p-4">
+            <h2>🖱️ Click to Load Details with defer</h2>
+
+            <div class="card-container">
+                @for (user of users; track user.id) {
+                <mat-card class="user-card" (click)="loadDetails(user)">
+                    <mat-card-title>{{ user.name }}</mat-card-title>
+                    <mat-card-content>
+                        @defer (when user.loaded) {
+                        @switch (user.status) {
+                        @case ('active') {
+                        <p>✅ Status: Active</p>
+                        }
+                        @case ('inactive') {
+                        <p>❌ Status: Inactive</p>
+                        }
+                        @default {
+                        <p>⏳ Status: Pending</p>
+                        }
+                        }
+                        } @placeholder {
+                        <p>🖱️ Click to load details...</p>
+                        }
+                    </mat-card-content>
+                </mat-card>
+                }
+            </div>
+        </div>
+
+
+    </mat-tab>
+    <mat-tab label="Load Component based on click">
+              <div class="p-3">
+            <button mat-raised-button color="accent" (click)="loadComponent = true">
+                @defer (when loadComponent) {
+                   <p>✅ Deferred content loaded!</p>
+                } @placeholder {
+                      <p>⏳ Please wait...</p> 
+                }
+
+            </button>
+        </div>
+    </mat-tab>
+</mat-tab-group>
