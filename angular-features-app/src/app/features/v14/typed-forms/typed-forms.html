@@ -1,18 +1,41 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
-  <mat-form-field appearance="fill" class="full-width">
-    <mat-label>Name</mat-label>
-    <input matInput placeholder="Enter your name" formControlName="name" />
-  </mat-form-field>
+<mat-tab-group>
+  <!-- FormGroup Tab -->
+  <mat-tab label="Contact Form">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmitContact()" class="contact-form p-4">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter your name" formControlName="name" />
+      </mat-form-field>
 
-  <mat-form-field appearance="fill" class="full-width">
-    <mat-label>Email</mat-label>
-    <input matInput type="email" placeholder="Enter your email" formControlName="email" />
-  </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Enter your email" formControlName="email" />
+      </mat-form-field>
 
-  <mat-form-field appearance="fill" class="full-width">
-    <mat-label>Message</mat-label>
-    <textarea matInput rows="4" placeholder="Write your message" formControlName="message"></textarea>
-  </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Message</mat-label>
+        <textarea matInput rows="4" placeholder="Write your message" formControlName="message"></textarea>
+      </mat-form-field>
 
-  <button mat-raised-button color="primary" type="submit">Submit</button>
-</form>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </mat-tab>
+
+  <!-- FormArray Tab -->
+  <mat-tab label="Phone Numbers">
+    <form [formGroup]="phoneForm" (ngSubmit)="onSubmitPhones()" class="p-4">
+      <div formArrayName="phones">
+        <div *ngFor="let phoneCtrl of phones.controls; let i = index">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Phone #{{ i + 1 }}</mat-label>
+            <input matInput [formControlName]="i" placeholder="Enter phone number" />
+            <button mat-button color="warn" type="button" (click)="removePhone(i)">Remove</button>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <button mat-stroked-button type="button" (click)="addPhone()">Add Phone</button>
+      <button mat-raised-button color="accent" type="submit">Submit</button>
+    </form>
+  </mat-tab>
+</mat-tab-group>
