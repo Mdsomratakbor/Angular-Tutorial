@@ -1,1 +1,45 @@
-<p>tree-shakable-injectables works!</p>
+<mat-tab-group>
+
+  <mat-tab label="Documentation">
+    <div class="content p-3">
+      <h2>Angular 14: Tree-Shakable Injectables</h2>
+      <p [innerHTML]="introduction">
+   
+      </p>
+
+      <h3>How it works</h3>
+      <ul>
+        <li>Use <code>providedIn: 'root'</code> (or any module) in your services.</li>
+        <li>Angular's build process excludes unused services, reducing final bundle size.</li>
+        <li>Services are "tree-shakable" and won't be bundled if not injected anywhere.</li>
+      </ul>
+
+      <h3>Benefits</h3>
+      <ul>
+        <li>Smaller application bundles</li>
+        <li>Improved startup performance</li>
+        <li>Cleaner dependency injection management</li>
+      </ul>
+
+      <h3>Example Service</h3>
+      <pre [innerHTML]="exampleService"></pre>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Example">
+    <div class="content p-3">
+
+      <h3>Component Example</h3>
+
+      <p>
+        Below is a simple Angular component demonstrating how to use a tree-shakable injectable service.
+      </p>
+
+      <pre [innerHTML]="exampleTreeShakableService"></pre>
+
+      <h4>Rendered Output:</h4>
+      {{message}}
+
+    </div>
+  </mat-tab>
+</mat-tab-group>

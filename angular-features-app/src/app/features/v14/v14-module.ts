@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { V14RoutingModule } from './v14-routing-module';
 import { V14 } from './v14';
 import { TypedForms } from './typed-forms/typed-forms';
-import { StandalonePreview } from './standalone-preview/standalone-preview';
 import { ExtendedDiagnostics } from './extended-diagnostics/extended-diagnostics';
 import { TitleStrategy } from './title-strategy/title-strategy';
 import { TreeShakableInjectables } from './tree-shakable-injectables/tree-shakable-injectables';
@@ -16,7 +15,6 @@ import { MaterialModule } from '../../shared/material.module';
   declarations: [
     V14,
     TypedForms,
-    StandalonePreview,
     ExtendedDiagnostics,
     TitleStrategy,
     TreeShakableInjectables
@@ -26,6 +24,6 @@ import { MaterialModule } from '../../shared/material.module';
     V14RoutingModule,
     ReactiveFormsModule,
     MaterialModule
-  ]
+  ],
 })
 export class V14Module { }

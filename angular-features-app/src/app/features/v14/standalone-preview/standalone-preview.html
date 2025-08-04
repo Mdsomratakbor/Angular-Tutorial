@@ -1,1 +1,47 @@
-<p>standalone-preview works!</p>
+<div class="container mt-4">
+  <h1 class="text-primary">🧩 Angular 14 – Standalone Components</h1>
+
+  <p class="mt-3" [innerHTML]="introduction"></p>
+
+  <hr />
+
+  <h2 class="mt-4 text-success">🚀 What's New?</h2>
+  <div [innerHTML]="whatsNew"></div>
+
+  <hr />
+
+  <h2 class="mt-4 text-success">📘 Basic Example</h2>
+  <h5>✅ TypeScript (standalone-preview.ts)</h5>
+  <pre class="bg-light p-3 rounded" [innerHTML]="basicExampleTs"></pre>
+
+  <h5 class="mt-3">✅ HTML (standalone-preview.html)</h5>
+  <pre class="bg-light p-3 rounded" [innerHTML]="basicExampleHtml"></pre>
+
+  <h5 class="mt-3">✅ SCSS (standalone-preview.scss)</h5>
+  <pre class="bg-light p-3 rounded" [innerHTML]="basicExampleScss"></pre>
+
+  <hr />
+
+  <h2 class="mt-4 text-success">🧭 Route Integration</h2>
+  <p>You can now use standalone components directly in your route configuration!</p>
+  <pre class="bg-light p-3 rounded" [innerHTML]="routeIntegration"></pre>
+
+  <hr />
+
+  <h2 class="mt-4 text-success">🎯 Benefits</h2>
+  <div [innerHTML]="benefits"></div>
+
+  <hr />
+
+  <h2 class="mt-4 text-success">📦 Common Use Cases</h2>
+  <div [innerHTML]="commonUseCases"></div>
+
+  <hr />
+
+  <h2 class="mt-4 text-success">⚠️ Notes</h2>
+  <div [innerHTML]="notes"></div>
+
+  <hr />
+
+  <p class="mt-4" [innerHTML]="conclusion"></p>
+</div>
