@@ -10,11 +10,11 @@ import { TreeShakableInjectables } from './tree-shakable-injectables/tree-shakab
 
 const routes: Routes = [
   { path: '', component: V14 },
-  { path: 'typed-forms', component: TypedForms },
-  { path: 'standalone-preview', component: StandalonePreview },
-  { path: 'extended-diagnostics', component: ExtendedDiagnostics },
-  { path: 'title-strategy', component: TitleStrategy },
-  { path: 'tree-shakable-injectables', component: TreeShakableInjectables }
+  { path: 'typed-forms', component: TypedForms, title:'typed-forms' },
+  { path: 'standalone-preview', component: StandalonePreview, title:'standalone-preview' },
+  { path: 'extended-diagnostics', component: ExtendedDiagnostics, title:'extended-diagnostics' },
+  { path: 'title-strategy', component: TitleStrategy, title:'title-strategy' },
+  { path: 'tree-shakable-injectables', component: TreeShakableInjectables, title:'tree-shakable-injectables' }
 ];
 
 @NgModule({

@@ -1,1 +1,13 @@
-<p>title-strategy works!</p>
+<mat-tab-group>
+  <!-- Documentation Tab -->
+  <mat-tab label="📄 Documentation">
+    <div [innerHTML]="documentation">
+
+    </div>
+  </mat-tab>
+
+  <!-- Example Tab -->
+  <mat-tab label="💻 Example">
+    <div [innerHTML]="example"></div>
+  </mat-tab>
+</mat-tab-group>
