@@ -1,1 +1,23 @@
-<p>directive-composition works!</p>
+<mat-card class="p-4">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Angular 15 – Directive Composition API</h1>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-tab-group>
+      <!-- Documentation Tab -->
+      <mat-tab label="Documentation">
+        <div [innerHTML]="documentation"></div>
+      </mat-tab>
+
+      <!-- Example Code Tab -->
+      <mat-tab label="Example Code">
+        <pre style="background-color:#f5f5f5; padding:1em; overflow:auto;">
+
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>

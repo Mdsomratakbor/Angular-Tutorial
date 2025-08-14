@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { V15RoutingModule } from './v15-routing-module';
 import { V15 } from './v15';
@@ -8,6 +8,7 @@ import { DirectiveComposition } from './directive-composition/directive-composit
 import { FunctionalGuards } from './functional-guards/functional-guards';
 import { ImageDirective } from './image-directive/image-directive';
 import { MaterialV3 } from './material-v3/material-v3';
+import { MaterialModule } from '../../shared/material.module';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { MaterialV3 } from './material-v3/material-v3';
   ],
   imports: [
     CommonModule,
-    V15RoutingModule
+    V15RoutingModule,
+    MaterialModule,
+    NgOptimizedImage
   ]
 })
 export class V15Module { }

@@ -1,1 +1,43 @@
-<p>signals works!</p>
+<mat-tab-group>
+  <!-- Documentation Tab -->
+  <mat-tab label="Documentation">
+    <div class="p-3">
+      <h1>Angular 16 Signals (Developer Preview)</h1>
+      <p>
+        Angular 16 introduced <strong>Signals</strong> as a developer preview feature to enable
+        fine-grained reactivity. Signals let you store reactive state and automatically update
+        consumers when the value changes.
+      </p>
+
+      <h2>Key APIs</h2>
+      <ul>
+        <li><code>signal(initialValue)</code> – Creates a writable signal.</li>
+        <li><code>computed(fn)</code> – Creates a derived signal.</li>
+        <li><code>effect(fn)</code> – Runs when dependencies change.</li>
+        <li><code>set(value)</code> – Sets a new value.</li>
+        <li><code>update(fn)</code> – Updates based on current value.</li>
+        <li><code>mutate(fn)</code> – Mutates the value in place.</li>
+      </ul>
+
+      <h2>Advantages</h2>
+      <ul>
+        <li>No need to manage subscriptions.</li>
+        <li>Less boilerplate compared to RxJS BehaviorSubject.</li>
+        <li>More predictable change detection.</li>
+      </ul>
+
+      <h2>Limitations</h2>
+      <ul>
+        <li>Still in developer preview in Angular 16.</li>
+        <li>Integration with some Angular APIs was added later (Angular 17+).</li>
+      </ul>
+    </div>
+  </mat-tab>
+
+  <!-- Example Tab -->
+  <mat-tab label="Example">
+    <div class="p-3" [innerHTML]="example">
+   
+    </div>
+  </mat-tab>
+</mat-tab-group>

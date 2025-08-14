@@ -8,6 +8,7 @@ import { DestroyRef } from './destroy-ref/destroy-ref';
 import { RequiredInputs } from './required-inputs/required-inputs';
 import { Httpclient } from './httpclient/httpclient';
 import { ZoneOptional } from './zone-optional/zone-optional';
+import { MaterialModule } from '../../shared/material.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ZoneOptional } from './zone-optional/zone-optional';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     V16RoutingModule
   ]
 })

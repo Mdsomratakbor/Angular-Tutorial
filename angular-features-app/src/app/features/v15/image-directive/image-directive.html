@@ -1,1 +1,59 @@
-<p>image-directive works!</p>
+<!-- app.component.html -->
+<div class="container mt-4">
+  <h1 class="text-primary">🚀 Angular 15 – Image Optimization with <code>NgOptimizedImage</code></h1>
+  <p class="mb-4 text-muted">
+    Learn how Angular 15's <code>NgOptimizedImage</code> directive helps improve performance, load time, and Core Web Vitals by handling images more efficiently.
+  </p>
+
+  <mat-tab-group>
+    <mat-tab label="📘 Documentation">
+      <div class="p-4">
+        <h2 class="mb-3">📖 What is <code>NgOptimizedImage</code>?</h2>
+        <p>
+          The <code>NgOptimizedImage</code> directive, introduced in Angular 15, is designed to make image loading faster and more efficient.
+          It is part of Angular's built-in image optimization strategies for improving performance and SEO.
+        </p>
+
+        <h3 class="mt-4">🔧 Key Features:</h3>
+        <ul>
+          <li><strong>ngSrc</strong>: Replaces standard <code>src</code> with optimized handling by Angular</li>
+          <li><strong>priority</strong>: Marks the image as <strong>critical for page load</strong> (LCP optimization)</li>
+          <li><strong>loading="lazy"</strong>: Enables native lazy loading by default for better performance</li>
+          <li><strong>width</strong> & <strong>height</strong>: Required for layout stability and to avoid layout shifts</li>
+          <li><strong>alt</strong>: Mandatory for accessibility and SEO compliance</li>
+          <li><strong>CDN Support</strong>: Works with both local and remote (CDN-hosted) images</li>
+        </ul>
+
+        <h4 class="mt-4">💡 Best Practices</h4>
+        <ul>
+          <li>Always specify <strong>width</strong> and <strong>height</strong> to prevent layout shifts</li>
+          <li>Use <strong>priority</strong> only for images above the fold (e.g., hero banners)</li>
+          <li>Ensure CDN domains are whitelisted in <code>angular.json</code> under <code>allowedImageDomains</code></li>
+        </ul>
+
+        <p class="mt-3">
+          <strong>📚 Official Documentation:</strong>
+          <a href="https://angular.io/api/common/NgOptimizedImage" target="_blank" rel="noopener">
+            NgOptimizedImage API – Angular Docs
+          </a>
+        </p>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="🧪 Example">
+      <div class="p-4">
+        <h3>🖼 Optimized Image Example</h3>
+        <img
+          ngSrc="https://images.unsplash.com/photo-1754374325925-547540899995?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          width="400"
+          height="300"
+          alt="Sample image from Unsplash"
+          priority
+        />
+        <p class="mt-2 text-muted">
+          This image is optimized using the <code>NgOptimizedImage</code> directive with <code>priority</code> set.
+        </p>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
