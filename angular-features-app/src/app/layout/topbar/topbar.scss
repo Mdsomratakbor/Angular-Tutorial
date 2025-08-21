@@ -2,3 +2,27 @@
   margin-left: 8px;
   font-weight: 600;
 }
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #1976d2, #2196f3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  button[mat-icon-button] {
+    margin-right: 12px;
+    color: #fff;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    flex: 1;
+  }
+}
