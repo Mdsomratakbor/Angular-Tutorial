@@ -12,4 +12,11 @@ export class Topbar {
   toggleSidebar() {
     this.drawer.toggle();
   }
+
+
+
+  logout() {
+    // Your logout logic here (e.g., call auth service, navigate to login page)
+    console.log('User logged out');
+  }
 }

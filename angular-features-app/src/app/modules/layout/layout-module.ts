@@ -7,6 +7,7 @@ import { Footer } from './footer/footer';
 
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../../shared/material.module';
+import { LayoutRoutingModule } from './layout-routing-module';
 
 
 
@@ -18,6 +19,7 @@ import { MaterialModule } from '../../shared/material.module';
     Footer],
   imports: [
     CommonModule,
+    LayoutRoutingModule,
     RouterModule,
     MaterialModule
  
