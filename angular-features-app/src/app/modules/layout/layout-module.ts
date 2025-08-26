@@ -4,8 +4,9 @@ import { Layout } from './layout';
 import { Topbar } from './topbar/topbar';
 import { Sidebar } from './sidebar/sidebar';
 import { Footer } from './footer/footer';
-import { MaterialModule } from '../shared/material.module';
+
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../../shared/material.module';
 
 
 

@@ -8,7 +8,7 @@ import { DirectiveComposition } from './directive-composition/directive-composit
 import { FunctionalGuards } from './functional-guards/functional-guards';
 import { ImageDirective } from './image-directive/image-directive';
 import { MaterialV3 } from './material-v3/material-v3';
-import { MaterialModule } from '../../shared/material.module';
+import { MaterialModule } from '../../../shared/material.module';
 
 
 @NgModule({

@@ -8,7 +8,7 @@ import { DeferredLoading } from './deferred-loading/deferred-loading';
 import { I18nPipes } from './i18n-pipes/i18n-pipes';
 import { RouterEnhancements } from './router-enhancements/router-enhancements';
 import { SignalForms } from './signal-forms/signal-forms';
-import { MaterialModule } from "../../shared/material.module";
+import { MaterialModule } from "../../../shared/material.module";
 import { FormsModule } from '@angular/forms';
 
 

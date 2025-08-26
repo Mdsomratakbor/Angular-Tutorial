@@ -8,7 +8,7 @@ import { ExtendedDiagnostics } from './extended-diagnostics/extended-diagnostics
 import { TitleStrategy } from './title-strategy/title-strategy';
 import { TreeShakableInjectables } from './tree-shakable-injectables/tree-shakable-injectables';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from '../../shared/material.module';
+import { MaterialModule } from '../../../shared/material.module';
 
 
 @NgModule({
