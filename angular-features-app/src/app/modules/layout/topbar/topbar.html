@@ -1,21 +1,67 @@
-<mat-toolbar color="primary" class="topbar-toolbar">
+<!-- <mat-toolbar color="primary" class="topbar-toolbar">
   <button mat-icon-button (click)="drawer.toggle()" aria-label="Toggle sidebar">
     <mat-icon>menu</mat-icon>
   </button>
 
   <span class="toolbar-title">Angular Feature Explorer (v14–v20)</span>
 
-  <span class="spacer"></span> <!-- pushes user menu to right -->
+  <span class="spacer"></span> pushes user menu to right -->
 
   <!-- User Icon & Menu -->
-  <button mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="User menu">
+  <!-- <button mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="User menu">
     <mat-icon>account_circle</mat-icon>
   </button>
   <mat-menu #userMenu="matMenu">
     <button mat-menu-item (click)="logout()">
       <mat-icon>logout</mat-icon>
       <span>Logout</span>
-    </button>
+    </button> -->
     <!-- You can add more menu items here -->
+  <!-- </mat-menu>
+</mat-toolbar> -->
+<mat-toolbar color="primary" class="topbar-toolbar">
+  <!-- Left Menu -->
+  <div class="menu-left">
+    <ng-container *ngFor="let group of menu">
+      <button mat-button [matMenuTriggerFor]="groupMenu">
+        {{ group.version }}
+      </button>
+
+      <mat-menu #groupMenu="matMenu">
+        <button mat-menu-item *ngFor="let feature of group.features"
+                [routerLink]="feature.route" routerLinkActive="active">
+          <mat-icon>{{ feature.icon }}</mat-icon>
+          {{ feature.name }}
+        </button>
+      </mat-menu>
+    </ng-container>
+  </div>
+
+  <span class="spacer"></span>
+
+  <!-- Right side -->
+  <button mat-icon-button [matMenuTriggerFor]="settingsMenu">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <mat-menu #settingsMenu="matMenu">
+    <button mat-menu-item [routerLink]="'/profile'">
+      <mat-icon>person</mat-icon> Profile
+    </button>
+    <button mat-menu-item [routerLink]="'/preferences'">
+      <mat-icon>tune</mat-icon> Preferences
+    </button>
+    <button mat-menu-item [routerLink]="'/logout'">
+      <mat-icon>logout</mat-icon> Logout
+    </button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="userMenu">
+    <mat-icon>account_circle</mat-icon>
+    Hi, samrat
+  </button>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon> Logout
+    </button>
   </mat-menu>
 </mat-toolbar>

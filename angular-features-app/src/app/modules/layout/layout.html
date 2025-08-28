@@ -1,10 +1,25 @@
-<mat-sidenav-container class="sidenav-container">
+<!-- <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer mode="side" opened class="sidenav">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <app-topbar [drawer]="drawer"></app-topbar>
+
+    <main class="main-content" style="min-height: 80vh;">
+      <router-outlet></router-outlet>
+    </main>
+
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+
+<mat-sidenav-container class="sidenav-container">
+  <!-- Removed sidenav -->
+  <mat-sidenav-content>
+    <app-topbar></app-topbar>
 
     <main class="main-content" style="min-height: 80vh;">
       <router-outlet></router-outlet>
